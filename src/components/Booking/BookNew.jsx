@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./book.css";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import TvIcon from '@mui/icons-material/Tv';
@@ -6,9 +6,17 @@ import SettingsInputHdmiIcon from '@mui/icons-material/SettingsInputHdmi';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import MonitorIcon from '@mui/icons-material/Monitor';
+import { CloudDone } from '@mui/icons-material';
 
 function BookNew() {
-
+    const [invited, addInvited] = useState("Invite a User");
+    const [roomNO, setRoomNO] = useState();
+    function handleRoom(roomno) {
+        setRoomNO(roomno);
+    }
+    function handleInvite(e) {
+        addInvited(e.target.innerHTML);
+    }
 
     return (
         <div className="book">
@@ -30,10 +38,11 @@ function BookNew() {
                         <label>Reserve a Room</label>
                         <div className="dropdown">
                             <button className="select " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <p> Select a Room</p><ArrowDropDownIcon />
+                                <p> Room {roomNO}</p><ArrowDropDownIcon />
                             </button>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={(e) => handleRoom(1)}>Room 1</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={(e) => handleRoom(2)}>Room 2</a></li>
                             </ul>
                         </div>
                     </div>
@@ -41,10 +50,10 @@ function BookNew() {
                         <label>Invite another user</label>
                         <div className="dropdown">
                             <button className="select " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <p> Invite a User</p><ArrowDropDownIcon />
+                                <p> {invited}</p><ArrowDropDownIcon />
                             </button>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#"><img src="" alt="" />Marie </a></li>
+                                <li><a className="dropdown-item" href="#" onClick={handleInvite}>Marie </a></li>
                             </ul>
                         </div>
                     </div>
