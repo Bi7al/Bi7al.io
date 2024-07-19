@@ -1,0 +1,50 @@
+.pane{
+    width: inherit;
+    height: 100%;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px 5px 0px 0px;  
+    text-align: center;
+    background-color: #262633;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title i{
+    margin: 0px 0px 5px 5px;
+}
+.pane ul{
+    margin-top: 2.5rem;
+}
+.active{
+    cursor: pointer;
+    color: white;
+}
+.pane ul li{
+    list-style: none;
+    text-align: start;
+    margin-top: 1rem;
+    color:#C4C5D0;
+    display: flex;
+    align-items: center;
+
+}
+.pane ul li i{
+    margin: 0px 1rem 0px 0px;
+    height: 28px;
+    text-align:center;
+    color: rgb(252, 252, 252);
+}
+.pane ul li :hover{
+    cursor: pointer;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    margin-top: 1px;
+    margin-bottom: 2px;
+}

@@ -1,0 +1,34 @@
+.task{
+    margin: 1.5rem .5rem 1rem .5rem;
+}
+.task-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-header:hover{
+    cursor: pointer;
+}
+.task-header input{
+    height: 1.25rem;
+    width: 1.5rem;
+    margin: 0;
+    border-radius: none;
+}
+.task-header button{
+    height: 1.5rem;
+    width: 1.5rem;
+    background: url("../../assets/pngegg.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    margin-bottom: 2rem;
+    
+}
+.task-body{
+   color: rgba(174, 174, 179, 1);
+   margin-top: 1.5rem;
+   margin-left: .5rem;
+}

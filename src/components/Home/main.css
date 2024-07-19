@@ -1,0 +1,145 @@
+
+/* For Feed */
+.header{
+    display:flex ;
+    margin:0px 0px 0px 10px;
+    align-items: center;
+}
+.header p{
+    font-size: 25px;
+    font-weight: 500;
+}
+.header button{
+    margin:0px 0px 0px 30px;
+    padding: 10px;
+    border: none;
+    color:  #2E3A59;
+
+}
+.radios{
+    margin:0px 0px 16px 0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.radios label {
+margin: 0px 0px 0px 25px;
+}
+.form-group{
+    width: 50vw;
+    border: 1px solid #2E3A59;
+    padding: 1.5rem;
+    background-color: white;
+}
+.form-group .title {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+}
+.form-group .title label{
+    text-align: start;
+}
+.form-group .title input{
+    height: 3.1rem;
+    width: 40%;
+    border: 1px solid #2E3A59;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px 0px 0px 5px;
+    font-size: 18px;
+    margin-bottom: 1rem;
+
+}
+.form-group .title textarea{
+    height: 288px;
+    width: 100%;
+    border: 1px solid #2E3A59;
+    padding: 10px 0px 0px 10px;
+    font-size: 18px;
+}
+.submitButton{
+    height: 48px;
+    width: 96px;
+}
+/* News Feed */
+.newsFeedContainer{
+    width: 100%;
+    height: 28rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    
+}
+.newsFeedContainer::-webkit-scrollbar{
+    display: none;
+}
+.news{
+    width:40%;
+    border-radius: 1rem;
+    background-color: white;
+    min-height: 192px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.newsHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.newsHeader img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    transform: translate(-30%,20%);
+    background-color: #2E3A59;
+    border: none;
+} 
+.newsHeader h3{
+    margin: .5rem 0 0 .3rem;
+}
+.newsHeader .span{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.newsBody{
+    margin: 1rem 0 0 .5rem;
+    padding: .5rem 0px 0px 3rem;
+
+}
+.News-desc{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+.News-desc h6{
+margin: 0;
+}
+.Survey-Rating{
+    margin:1rem 0 0 2rem;
+}
+.newsHeader button{
+    background-color: inherit;
+    border: none;
+}
+.newsFooter{
+    display: flex;
+    justify-content: end;
+    color: rgb(219, 219, 219);
+    padding-right: 10px;
+    margin-top: 1rem;
+}
+.invitation{
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

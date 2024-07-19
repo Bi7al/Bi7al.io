@@ -1,0 +1,53 @@
+
+.Background-cover{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CalendarContainer{
+  height: 40rem;
+  width: 60rem;
+  background-color: white;
+  
+}
+.Event-Modal{
+  /* height: 10rem; */
+  width:40rem;
+  padding: 1rem;
+  border: none;
+}
+.Event-Modal .Event-Description{
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  padding: .5rem;
+}
+.Event-Description button{
+  border: none;
+  background-color: #fff1e3;
+}
+.Event-Input-Modal{
+  width: 20rem;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.Event-Input-Modal:focus{
+  outline: none;
+}
+.Event-Input-Modal button{
+  border: none;
+  width: 10rem;
+  color: grey;
+  background-color: #fff1e3;
+}
+.Event-Input-Modal button:hover{
+  color: #000000;
+  
+}

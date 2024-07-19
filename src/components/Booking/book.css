@@ -1,0 +1,97 @@
+p {
+    margin: 0; 
+}
+.book{
+    padding-left: 1.5%;
+}
+.book h4{
+    background-color: white;
+    width: 227px;
+    height: 43px;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.datesInput
+{
+    display: flex;
+    flex-direction: row;
+}
+.datesInput label{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+    /* margin-left: 20px; */
+}
+.date input{
+    width: 160px;
+    height: 25px;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+
+}
+
+.date input:focus{
+    outline: none;
+}
+
+.inputgroup{
+    margin-top: 20px;
+    gap: 30px;
+    
+}
+.selectInput{
+    display: flex;
+    flex-direction: column;
+    
+}
+.selectInput .select{
+    height: 56px;
+    width: 368px;
+    border-radius: 10px 10px 0px 0px;
+    text-align: start;
+    background-color: white;
+    border: none;
+    color: #2d2d2d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdown-item{
+    width: 368px;
+    color: #f4f4f4;
+}
+.dropdown-item:hover{
+    background: none;
+}
+.dropdown-menu{
+    border-radius: 0px 0px 10px 10px;
+    background-color: #A3B18A;
+}
+.select:focus{
+    border:  2px solid #A3B18A;
+}
+.equipment{
+    margin-top: 54px;
+}
+.equipmentIcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon-group{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+ 

@@ -1,0 +1,11 @@
+.taskContainer{
+    display: flex;
+    width: 100%;
+}
+.Task-Listing{
+    width: 25rem;
+}
+.Task-Description{
+    width: 100%;
+
+}

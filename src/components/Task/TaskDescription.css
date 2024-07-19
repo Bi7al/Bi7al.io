@@ -1,0 +1,30 @@
+.Cover{
+    height: 100%;
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+
+}
+.Description{
+    width: 100%;
+    height: 28rem;
+    background-color: #ffffff;
+    top: 20%;
+    position: relative;
+    transform: translateY(-20%);
+    padding: 1rem;
+
+}
+.Description .Title-Description{
+    padding: 1rem;
+}
+.Description .Description-body{
+    margin: 1rem 0 0 0 ;
+}
+.Description .Description-body p{
+    margin-left: 1rem;
+}
+.Description-body .Description-Area{
+    height: 16rem;
+    width: 100%;
+    background-color:rgba(253, 250, 250, 1);
+}
