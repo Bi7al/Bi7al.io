@@ -54,7 +54,13 @@ function Feed() {
     //NewsFeed Container
     function addFeed() {
         const dateNow = new Date();
-        SetFeed([...feed, { ...data, id: dateNow.getTime(), date: dateNow }]);
+        if (data.date) {
+            SetFeed([...feed, { ...data, id: dateNow.getTime() }]);
+
+        }
+        else {
+            SetFeed([...feed, { ...data, id: dateNow.getTime(), date: dateNow }]);
+        }
         SetData({
             type: "",
             title: "",

@@ -22,7 +22,7 @@ function News({ news, remove }) {
         case "Invitation":
             const Invitation = {
                 title: news.title,
-                start: new Date(),
+                start: news.date,
             }
             body = <div className="invitation">
                 <h6>{news.date.toDateString()}</h6>

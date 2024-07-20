@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 
 export default function MessageComponent({ data, SetData }) {
     let messageType = data.type;
+    let date;
     function handleChange(e) {
         const fieldName = e.target.name;
         const fieldValue = e.target.value;
+        SetData({ ...data, [fieldName]: fieldValue })
+    }
+    function handleInvitation(e) {
+        const fieldName = e.target.name;
+        const fieldValue = new Date(e.target.value);
         SetData({ ...data, [fieldName]: fieldValue })
     }
     let messageComponent;
@@ -36,6 +42,10 @@ export default function MessageComponent({ data, SetData }) {
             );
             break;
         case 'Invitation':
+            messageComponent = (<>
+                <label htmlFor="Event-Date">Date of Event:</label>
+                <input type="date" id='Event-Date' className='Invitation-Date' name='date' onChange={handleInvitation} />
+            </>)
             break;
         default:
             messageComponent = <p>Select a message type</p>;

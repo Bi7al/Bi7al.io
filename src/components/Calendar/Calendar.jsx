@@ -21,7 +21,8 @@ function Calendar() {
         if (RecievedEvent != null && RecievedEvent != undefined) {
             const date = moment(RecievedEvent.start);
             const start = date.toDate();
-            const end = moment(start).add(1, 'days').toDate();
+            const end = date.add(1, 'days').toDate();
+            start.setHours(0, 0, 0, 0);
             end.setHours(0, 0, 0, 0)
             const temp = {
                 title: RecievedEvent.title,
