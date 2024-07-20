@@ -44,26 +44,17 @@ function ProfileCard() {
                                 </select>
                             </div>
                         </div>
-
-                        <div className="formgroup">
-                            <label htmlFor="contact">Contact</label>
-                            <div className="contact-info">
-                                <span><div className="contact-item">
-                                    <i className="fas fa-phone"></i>
-                                    <span><LocalPhoneIcon />+33.89.93.93.04</span>
-                                </div>
-                                    <div className="contact-item">
-                                        <i className="fas fa-envelope"></i>
-                                        <span><AlternateEmailIcon />alexarawles@gmail.com</span>
-                                    </div>
-                                </span>
-                                <br />
-                                <div className="contact-item">
-                                    <i className="fas fa-phone"></i>
-                                    <span><LocalPhoneIcon />635</span>
-                                </div>
-
+                        <label htmlFor="contact">Contact</label>
+                        <div className="Row">
+                            <div className="contact-item">
+                                <LocalPhoneIcon /><input type="text" placeholder='+33.89.93.93.04' />
                             </div>
+                            <div className="contact-item">
+                                <AlternateEmailIcon /><input type="text" placeholder='alexarawles@gmail.com' />
+                            </div>
+                        </div>
+                        <div className="contact-item">
+                            <LocalPhoneIcon /><input type="text" placeholder='635' />
                         </div>
                     </div>
                 </div>
