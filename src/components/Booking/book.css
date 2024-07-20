@@ -2,7 +2,7 @@ p {
     margin: 0; 
 }
 .book{
-    padding-left: 1.5%;
+    padding-left: 2rem;
 }
 .book h4{
     background-color: white;
@@ -66,6 +66,9 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.dropdown button{
+    padding-left: .5rem;
 }
 .dropdown-item{
     width: 368px;

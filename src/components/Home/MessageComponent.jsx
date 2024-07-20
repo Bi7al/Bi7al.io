@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 export default function MessageComponent({ data, SetData }) {
     let messageType = data.type;

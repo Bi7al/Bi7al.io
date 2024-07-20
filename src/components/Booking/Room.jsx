@@ -75,19 +75,7 @@ function Room() {
                     </span>
                     <p>Heater</p>
                 </div>
-                <div className="Owned equipment">
-                    <p>Room Equipment</p>
-                    <div className="icon-group">
-                        <div className="equipmentIcon"><TvIcon sx={{ color: 'black' }} /><p>Screen</p></div>
-                        <div className="equipmentIcon"><SettingsInputHdmiIcon sx={{ color: 'black' }} /><p>HDMI</p></div>
-                    </div>
-                    <div className="icon-group">
-                        <div className="equipmentIcon"><VolumeUpIcon sx={{ color: 'black' }} /><p>Speakers</p></div>
-                        <div className="equipmentIcon"><MonitorIcon sx={{ color: 'black' }} /><p>Interactive Whiteboard</p></div>
-                        <div className="equipmentIcon"><KeyboardVoiceIcon sx={{ color: 'black' }} /><p>Visio Conference</p></div>
-                    </div>
 
-                </div>
                 <Modal
                     open={open}
                     onClose={handleClose}

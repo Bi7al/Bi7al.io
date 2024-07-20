@@ -43,7 +43,7 @@ function Top() {
     //}, [coords])
 
     return (
-        <div className="containerTop">
+        <div className="Container-Top">
             <div className="text">
                 <h3>Welcome {user}, Today is {time}</h3>
             </div>

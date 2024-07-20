@@ -79,13 +79,13 @@ function Feed() {
 
     return (
         <>
-            <div className='header'>
+            <div className='Feed-Header'>
                 <p>News Feed</p>
                 <button onClick={handleOpen}>+ <b>Write a News</b></button>
             </div>
 
 
-            <div className='newsFeedContainer'>
+            <div className='NewsFeedContainer'>
                 {
                     feed.map((news, index) => {
                         return (

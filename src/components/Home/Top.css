@@ -1,8 +1,8 @@
-.containerTop{
-    padding: 12px 0px 0px 12px;
+.Container-Top{
+    padding: 1.25rem 0px 0px 1.25rem;
 }
 .weather p{
-    font-size: 96px;
+    font-size: 6rem;
     color: aliceblue;
     margin: 0;
 }

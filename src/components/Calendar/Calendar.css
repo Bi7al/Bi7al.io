@@ -7,13 +7,12 @@
   align-items: center;
 }
 .CalendarContainer{
-  height: 40rem;
-  width: 60rem;
+  height: 45rem;
+  width: 80rem;
   background-color: white;
   
 }
 .Event-Modal{
-  /* height: 10rem; */
   width:40rem;
   padding: 1rem;
   border: none;

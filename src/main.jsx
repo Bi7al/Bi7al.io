@@ -10,7 +10,6 @@ import Company from "./components/Company/Company.jsx";
 import Profile from "./components/Profile/Profile.jsx";
 import Room from './components/Booking/Room.jsx';
 import { loader as RoomLoader } from "./components/Booking/Room.jsx";
-// import { loader as CalendarLoader } from "./components/Calendar/Calendar.jsx"
 const router = createBrowserRouter([{
   path: '/',
   element: <App />,
