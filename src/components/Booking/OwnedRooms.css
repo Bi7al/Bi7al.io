@@ -1,32 +1,32 @@
 .containerCustom{
     width: 100%;
-    height: 45%;
+    height: 40%;
     box-sizing: border-box;
     padding: 1px 0px 0px 0px;
 }
 
  .owned{
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 1.5%;
  }
  .owned h4{
     background-color: white;
     padding: 5px 5px 5px 5px;
 
-    width: 192px;
-   height: 43px;
+    width:12rem;
+   height: 2.5rem;
    display: flex;
    align-items: center;
    color: black;
 
  }
  .ownedRooms{
-    gap: 10px;
-    margin-bottom: 2rem;
+    gap: 2rem;
+    margin-bottom: 1rem;
  }
  .ownedRoom{
-    height: 148px;
-    width: 348px;
+    height: 9rem;
+    width: 21rem;
     border-radius: 25px;
     
     display: flex;

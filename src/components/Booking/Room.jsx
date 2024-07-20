@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import "./Room.css";
+import TvIcon from '@mui/icons-material/Tv';
+import SettingsInputHdmiIcon from '@mui/icons-material/SettingsInputHdmi';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
+import MonitorIcon from '@mui/icons-material/Monitor';
 import { Modal } from '@mui/material';
 import { Box } from '@mui/system';
 import { Height, WbIncandescentOutlined } from '@mui/icons-material';
@@ -69,6 +74,19 @@ function Room() {
                         </div>
                     </span>
                     <p>Heater</p>
+                </div>
+                <div className="Owned equipment">
+                    <p>Room Equipment</p>
+                    <div className="icon-group">
+                        <div className="equipmentIcon"><TvIcon sx={{ color: 'black' }} /><p>Screen</p></div>
+                        <div className="equipmentIcon"><SettingsInputHdmiIcon sx={{ color: 'black' }} /><p>HDMI</p></div>
+                    </div>
+                    <div className="icon-group">
+                        <div className="equipmentIcon"><VolumeUpIcon sx={{ color: 'black' }} /><p>Speakers</p></div>
+                        <div className="equipmentIcon"><MonitorIcon sx={{ color: 'black' }} /><p>Interactive Whiteboard</p></div>
+                        <div className="equipmentIcon"><KeyboardVoiceIcon sx={{ color: 'black' }} /><p>Visio Conference</p></div>
+                    </div>
+
                 </div>
                 <Modal
                     open={open}

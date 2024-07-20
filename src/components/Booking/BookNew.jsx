@@ -6,7 +6,6 @@ import SettingsInputHdmiIcon from '@mui/icons-material/SettingsInputHdmi';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import MonitorIcon from '@mui/icons-material/Monitor';
-import { CloudDone } from '@mui/icons-material';
 
 function BookNew() {
     const [invited, addInvited] = useState("Invite a User");
@@ -33,7 +32,7 @@ function BookNew() {
                         <input type="text" onFocus={(e) => { e.target.type = "date" }} name="checkOut" id="checkOut" placeholder="MM-DD-YY" />
                     </div>
                 </div>
-                <div className="inputgroup d-lg-flex">
+                <div className="inputgroup ">
                     <div className="selectInput  ">
                         <label>Reserve a Room</label>
                         <div className="dropdown">
@@ -58,6 +57,8 @@ function BookNew() {
                         </div>
                     </div>
                 </div>
+
+                <button type='submit' className='BookingSubmit'>Submit</button>
             </form>
             {/* Icon section */}
             <div className="equipment">
