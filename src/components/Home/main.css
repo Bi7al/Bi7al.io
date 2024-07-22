@@ -113,6 +113,7 @@ margin: 0px 0px 0px 25px;
     margin: 1rem 0 0 .5rem;
     padding: .5rem 0px 0px 3rem;
     overflow: auto;
+    word-wrap: break-word;
 
 }
 .newsBody::-webkit-scrollbar{
