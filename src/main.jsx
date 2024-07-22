@@ -16,7 +16,8 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <h1>Oops</h1>, // Element to display if route fails to load
+    errorElement: <><h1>Oops</h1>
+      <p>There Was an Error. Sorry For Inconvenience</p></>, // Element to display if route fails to load
     children: [
       {
         path: '/',
