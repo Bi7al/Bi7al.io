@@ -72,7 +72,7 @@ margin: 0px 0px 0px 25px;
     box-sizing: border-box;
     
 }
-.newsFeedContainer::-webkit-scrollbar{
+.NewsFeedContainer::-webkit-scrollbar{
     display: none;
 }
 .news{

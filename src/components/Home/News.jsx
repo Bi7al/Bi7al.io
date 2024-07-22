@@ -41,7 +41,7 @@ function News({ news, remove }) {
         case "Survey":
             body = (
                 <div className="Survey-Rating">
-                    <Rating name="read-only" value={news.rating} size='large' readOnly />
+                    <Rating name="read-only" value={parseInt(news.rating)} size='large' readOnly />
                 </div>
             );
             From = <p>Survey From XXX</p>;
