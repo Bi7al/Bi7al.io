@@ -7,7 +7,7 @@
 }
 .Description{
     width: 55rem;
-    height: 28rem;
+    height: 40rem;
     background-color: #ffffff;
     top: 20%;
     position: relative;
@@ -27,7 +27,7 @@
     margin-left: 1rem;
 }
 .Description-body .Description-Area{
-    height: 16rem;
+    height: 20rem;
     width: 100%;
     
     background-color:rgba(253, 250, 250, 1);
