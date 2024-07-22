@@ -66,7 +66,7 @@ margin: 0px 0px 0px 25px;
 }
 /* News Feed */
 .NewsFeedContainer{
-    height: 35rem;
+    height: 30rem;
     overflow-x: hidden;
     overflow-y: auto;
     box-sizing: border-box;
