@@ -128,13 +128,12 @@ function Calendar() {
                     top: '50%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
-                    backgroundColor: "white",
                 }}>
                     <form onSubmit={handleNewEventSubmit}>
                         <div className="Event-Input-Modal">
-                            <div className='d-flex flex-column'>
+                            <div className='d-flex flex-column m-0'>
                                 <label htmlFor="title">Enter Event </label>
-                                <input type="text" name='title' required />
+                                <input id='eventinput' type="text" name='title' required />
                             </div>
                             <button type='submit'>Add</button>
                         </div>
