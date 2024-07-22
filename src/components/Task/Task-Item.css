@@ -6,6 +6,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    word-wrap: break-word;
+}
+.task-header h3{
+    margin: 0;
+    width: 10rem;
 }
 .task-header:hover{
     cursor: pointer;

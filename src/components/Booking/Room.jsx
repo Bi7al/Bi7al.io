@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import "./Room.css";
-import TvIcon from '@mui/icons-material/Tv';
-import SettingsInputHdmiIcon from '@mui/icons-material/SettingsInputHdmi';
-import VolumeUpIcon from '@mui/icons-material/VolumeUp';
-import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
-import MonitorIcon from '@mui/icons-material/Monitor';
+
 import { Modal } from '@mui/material';
 import { Box } from '@mui/system';
 import { WbIncandescentOutlined, AcUnitOutlined } from '@mui/icons-material';

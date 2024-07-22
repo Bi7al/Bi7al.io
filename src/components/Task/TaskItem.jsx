@@ -7,7 +7,7 @@ function TaskItem({ task, getTask }) {
     return (
         <div className="task">
             <div className="task-header">
-                <h3 onClick={sendID}>{task.title}</h3>
+                <div className='task-title'><h3 onClick={sendID}>{task.title}</h3></div>
                 <input type="checkbox" />
                 <button></button>
             </div>

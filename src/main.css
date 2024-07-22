@@ -3,5 +3,6 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins";
-  background: "#F6E6CB" 
+  background: "#F6E6CB" ;
+  word-wrap: break-word;
 }
