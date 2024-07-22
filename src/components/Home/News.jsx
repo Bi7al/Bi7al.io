@@ -19,7 +19,7 @@ function News({ news, remove }) {
     // Determine the type of news and set the body and source accordingly
     switch (news.type) {
         case "Message":
-            body = <p>{news.description}</p>;
+            body = <p >{news.description}</p>;
             From = <p>Message From XXX</p>;
             break;
         case "Invitation":
@@ -65,7 +65,7 @@ function News({ news, remove }) {
                 </button>
             </div>
             <div className="newsBody">
-                <h4>{news.title}</h4>
+                <h4 >{news.title}</h4>
                 <div className="News-desc">
                     {body}
                 </div>

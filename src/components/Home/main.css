@@ -67,7 +67,7 @@ margin: 0px 0px 0px 25px;
 /* News Feed */
 .NewsFeedContainer{
     height: 30rem;
-    overflow-x: hidden;
+    overflow-x:hidden;
     overflow-y: auto;
     box-sizing: border-box;
     
@@ -76,13 +76,15 @@ margin: 0px 0px 0px 25px;
     display: none;
 }
 .news{
-    width:40%;
+    width:40rem;
     border-radius: 1rem;
     background-color: white;
     min-height: 192px;
     margin-top: 20px;
     margin-left: 20px;
+    padding-right: .5rem;
 }
+
 .newsHeader{
     width: 100%;
     display: flex;
@@ -110,7 +112,11 @@ margin: 0px 0px 0px 25px;
 .newsBody{
     margin: 1rem 0 0 .5rem;
     padding: .5rem 0px 0px 3rem;
+    overflow: auto;
 
+}
+.newsBody::-webkit-scrollbar{
+    display: none;
 }
 .News-desc{
     width: 100%;
