@@ -138,7 +138,7 @@ margin: 0;
 }
 .invitation{
     height: 100%;
-
+padding-right: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

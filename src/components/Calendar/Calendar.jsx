@@ -5,17 +5,20 @@ import { Calendar as BigCalendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import "./Calendar.css"
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
+// Initialize the localizer with moment
 const localizer = momentLocalizer(moment);
 
 function Calendar() {
     const [events, setEvents] = useState([]);
-    const [newEvent, setNewEvent] = useState();
+    const [newEvent, setNewEvent] = useState({});
     const [selectedEvent, setSelectedEvent] = useState(null);
-    const [modalOpen, setModalOpen] = useState(false);//For Displaying the Event
-    const [NewEventModal, setNewEventModal] = useState(false);//To record a new Event
+    const [modalOpen, setModalOpen] = useState(false); // For displaying the event details
+    const [newEventModalOpen, setNewEventModalOpen] = useState(false); // For adding a new event
     const selectedDate = new Date();
-    let { Invitation } = useParams();// Needs Proper Backend
+    let { Invitation } = useParams(); // Fetch invitation data from URL params
+
     useEffect(() => {
         const RecievedEvent = JSON.parse(Invitation);
         if (RecievedEvent != null && RecievedEvent != undefined) {
@@ -35,44 +38,41 @@ function Calendar() {
         }
     }, [Invitation]);
 
-    function handleModelClose() {
+    // Function to close the event details modal
+    const handleModalClose = () => {
         setModalOpen(false);
-    }
+    };
 
+    // Function to handle event selection and open the details modal
     const handleSelectEvent = (event) => {
         setSelectedEvent(event);
         setModalOpen(true);
     };
 
+    // Function to handle slot selection and open the new event modal
     const handleSelectSlot = (slotInfo) => {
-        handleNewEventModalOpen();
-        const start = slotInfo.start;
-        const end = slotInfo.end;
-        setNewEvent({ ...newEvent, start, end });
+        setNewEvent({ start: slotInfo.start, end: slotInfo.end });
+        setNewEventModalOpen(true);
     };
 
-    function remove() {
-        const newEvents = events.filter((event) => event.title !== selectedEvent.title);
-        setEvents(newEvents);
+    // Function to remove the selected event
+    const handleRemoveEvent = () => {
+        setEvents(events.filter(event => event !== selectedEvent));
         setModalOpen(false);
+    };
 
-    }
-    const handleNewEventModalOpen = () => {
-        setNewEventModal(true);
-    };
+    // Function to close the new event modal
     const handleNewEventModalClose = () => {
-        setNewEventModal(false);
+        setNewEventModalOpen(false);
     };
+
+    // Function to handle submission of a new event
     const handleNewEventSubmit = (e) => {
         e.preventDefault();
-        const title = e.target[0].value;
-        setNewEvent((prev) => {
-            const temp = prev;
-            temp.title = title;
-            return temp;
-        });
-        setNewEventModal(false);
-        setEvents([...events, newEvent]);
+        const title = e.target.title.value;
+        const event = { ...newEvent, title };
+        setEvents(prevEvents => [...prevEvents, event]);
+        setNewEventModalOpen(false);
     };
 
     return (
@@ -92,7 +92,7 @@ function Calendar() {
             </div>
             <Modal
                 open={modalOpen}
-                onClose={handleModelClose}
+                onClose={handleModalClose}
                 aria-labelledby="modal-title"
                 aria-describedby="modal-description"
             >
@@ -105,12 +105,12 @@ function Calendar() {
                 }}>
                     <div className="Event-Modal">
                         <div className="Event-Title">
-                            <h3>Event Title: {selectedEvent && selectedEvent.title}</h3>
+                            <h3>Event Title: {selectedEvent?.title}</h3>
                         </div>
                         {selectedEvent && <div className="Event-Description">
                             <p><b>Start:</b> {selectedEvent.start.toLocaleString()}</p>
                             <p><b>End:</b> {selectedEvent.end.toLocaleString()}</p>
-                            <button onClick={remove}>Remove Event</button>
+                            <button onClick={handleRemoveEvent}>Remove Event</button>
                         </div>}
                     </div>
                 </Box>
@@ -118,7 +118,7 @@ function Calendar() {
 
             {/* Modal For New Event */}
             <Modal
-                open={NewEventModal}
+                open={newEventModalOpen}
                 onClose={handleNewEventModalClose}
                 aria-labelledby="modal-title"
                 aria-describedby="modal-description"
@@ -130,26 +130,19 @@ function Calendar() {
                     transform: 'translate(-50%, -50%)',
                     backgroundColor: "white",
                 }}>
-                    <form action="" onSubmit={handleNewEventSubmit}>
+                    <form onSubmit={handleNewEventSubmit}>
                         <div className="Event-Input-Modal">
-                            <div>
-                                <label htmlFor="title">Enter Event</label>
-                                <input type="text" name='title' required={true} />
+                            <div className='d-flex flex-column'>
+                                <label htmlFor="title">Enter Event </label>
+                                <input type="text" name='title' required />
                             </div>
-                            <button type='submit' >Add</button>
-
+                            <button type='submit'>Add</button>
                         </div>
                     </form>
                 </Box>
             </Modal>
-
         </>
     );
-};
+}
 
 export default Calendar;
-
-
-
-
-

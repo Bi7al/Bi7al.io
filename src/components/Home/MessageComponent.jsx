@@ -1,19 +1,19 @@
 import React from 'react';
 
-export default function MessageComponent({ data, SetData }) {
+export default function MessageComponent({ data, setData }) {
     // Extract the message type from the data prop
     const messageType = data.type;
 
     // Handler for text and select inputs
     const handleChange = (e) => {
         const { name, value } = e.target;
-        SetData({ ...data, [name]: value });
+        setData({ ...data, [name]: value });
     };
 
     // Handler for date inputs
     const handleInvitation = (e) => {
         const { name, value } = e.target;
-        SetData({ ...data, [name]: new Date(value) });
+        setData({ ...data, [name]: new Date(value) });
     };
 
     // Initialize the message component variable
